@@ -1,0 +1,21 @@
+.Dialogs-wrapper{
+  width:70%;
+  @include flexbox();
+  .Dialogs-people{
+    width:40%;
+    a{
+      text-decoration: none;
+      color:black;
+    }
+    .Dialogs-people-name{
+      padding:5px 0px 5px 5px;
+      width:50%;
+    }
+    .Dialog-active{
+      background-color: aliceblue;
+    }
+  }
+  .Dialogs-messages{
+    width:60%;
+  }
+}

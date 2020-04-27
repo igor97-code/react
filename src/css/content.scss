@@ -1,0 +1,7 @@
+.content-wrapper{
+  @include flexbox();
+
+  .content-main{
+    width:70%;
+  }
+}

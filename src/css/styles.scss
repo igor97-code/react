@@ -1,0 +1,20 @@
+/*Базовые стили*/
+@import './base';
+
+/*Миксины*/
+@import './mixins';
+
+/*Стили для шапки*/
+@import './header';
+
+/*Стили для основного контенка*/
+@import './content';
+
+/*НАвигация*/
+@import './navBar';
+
+/*Блок с диалогами*/
+@import './messages';
+
+/*Блок с Профиля*/
+@import './profile';
