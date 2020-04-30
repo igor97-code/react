@@ -8,7 +8,6 @@ import Dialogs from "./Dialogs/Dialogs.jsx";
 
 
 const Content = (props)=>{
-    console.log(props);
     return(
         <BrowserRouter>
             <section>
@@ -18,8 +17,8 @@ const Content = (props)=>{
                         <Route path ='/Profile' render = { ()=>{
                            return <Profile postValue = {props.state._state.InfoPosts.PostValue}
                                            posts = {props.state._state.InfoPosts.posts}
-                                           addPost = {props.state.addPost}
-                                           addPostValue = {props.state.addPostValue.bind(props.state)} />}
+                                           dispatch = {props.state.dispatch.bind(props.state)}
+                                            />}
                         }/>
                        <Route path ='/Dialogs' render= {()=>{
                       return   <Dialogs dialogs = {props.state._state.Dialogs} messages = {props.state._state.Messages} />}}/>

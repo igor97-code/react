@@ -20,19 +20,21 @@ let Store = {
          ]
      }
  },
-    addPost(message){
-        this._state.InfoPosts.posts.push({
-            post:message,
-            name:"ignat",
-            img:"../img/assets/avatar.jpg",
-            id:3
-        });
-        this._state.InfoPosts.PostValue ='';
-        RenderingDom(this._state);
-    },
-    addPostValue(value){
-        this._state.InfoPosts.PostValue = value;
-        RenderingDom(this._state);
+    dispatch(action = {}){
+      if(action.type == 'addpost'){
+          this._state.InfoPosts.posts.push({
+              post:action.message,
+              name:"ignat",
+              img:"../img/assets/avatar.jpg",
+              id:3
+          });
+          this._state.InfoPosts.PostValue ='';
+          RenderingDom(this);
+      }
+      else if(action.type == 'addTextPost'){
+          this._state.InfoPosts.PostValue = action.value;
+          RenderingDom(this);
+      }
     }
 }
 export default Store;
