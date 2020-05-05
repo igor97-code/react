@@ -21,7 +21,9 @@ const Content = (props)=>{
                                             />}
                         }/>
                        <Route path ='/Dialogs' render= {()=>{
-                      return   <Dialogs dialogs = {props.state._state.Dialogs} messages = {props.state._state.Messages} />}}/>
+                      return   <Dialogs dialogs = {props.state._state.Dialogs}
+                                        infoMessages = {props.state._state.infoMessages}
+                                        dispatch = {props.state.dispatch.bind(props.state)}/>}}/>
                     </div>
                 </div>
             </section>

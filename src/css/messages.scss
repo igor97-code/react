@@ -1,6 +1,8 @@
 .Dialogs-wrapper{
   width:70%;
-  @include flexbox();
+  .wrapper-messages{
+    @include flexbox();
+  }
   .Dialogs-people{
     width:40%;
     a{
@@ -17,5 +19,10 @@
   }
   .Dialogs-messages{
     width:60%;
+  }
+  .Send-messages{
+    padding-top:15px;
+    @include flexbox();
+    align-items:center;
   }
 }

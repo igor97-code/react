@@ -20,18 +20,37 @@ let MessageItem = ({message}) =>{
 
 
 let Dialogs = (props)=>{
+    let newMEssageValue = React.createRef();
+    let TextMessage = ()=>{
+        props.dispatch({
+            type:'addTextMessage',
+            text: newMEssageValue.current.value
+        });
+    }
+    let addMessage = () => {
+        props.dispatch({
+            type:'addMessage',
+            message:newMEssageValue.current.value,
+        });
+    }
     let arrayDialogs = props.dialogs
         .map( (dialog,key)=> <DialogsPeoples key = {key} dialogs ={dialog}/>)
 
-    let arrayMessages = props.messages
+    let arrayMessages = props.infoMessages.Messages
         .map( (message,key) => <MessageItem key = {key} message = {message}/> )
     return(
         <div className="Dialogs-wrapper">
-            <div className="Dialogs-people">
-                {arrayDialogs}
+            <div className ="wrapper-messages">
+                <div className="Dialogs-people">
+                    {arrayDialogs}
+                </div>
+                <div className="Dialogs-messages">
+                    {arrayMessages}
+                </div>
             </div>
-            <div className="Dialogs-messages">
-                {arrayMessages}
+            <div className ="Send-messages">
+                <textarea ref = {newMEssageValue}  onChange = {TextMessage} value = {props.infoMessages.MessageText}/>
+                <button onClick = {addMessage} >Отправить сообщение</button>
             </div>
         </div>
     )
