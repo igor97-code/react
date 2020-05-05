@@ -6,13 +6,15 @@
 
 let messageReduser = (state, action)=>{
     if(action.type == 'addTextMessage'){
-        state.Messages.push({
-            Message:action.message
-        });
-        state.PostValue ='';
+        state.MessageText = action.text;
     }
-    else if(action.type == 'addTextPost'){
-        state.PostValue = action.value;
+    else if(action.type == 'addMessage'){
+        state.Messages.push(
+            {
+                message: action.message,
+                id:4
+            }
+        );
     }
     return state;
 };
