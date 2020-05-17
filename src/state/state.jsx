@@ -4,18 +4,20 @@ import messageReduser from './ReduserMessage.js';
 
 let Store = {
  _state:{
-     Dialogs: [
-         {name: 'Дмитрий', id: 1},
-         {name: 'Вявеслав', id: 2},
-         {name: 'Екатерина', id: 3},
-         {name: 'Александа', id: 4}
-     ],
-     infoMessages: {
-         Messages: [
-             {message: 'hello hello', id: "1"},
-             {message: 'Testtest', id: "2"},
-             {message: 'test message', id: "3"}],
-         MessageText:'',
+     InfoDialogs: {
+         Dialogs: [
+             {name: 'Дмитрий', id: 1},
+             {name: 'Вявеслав', id: 2},
+             {name: 'Екатерина', id: 3},
+             {name: 'Александа', id: 4}
+         ],
+         infoMessages: {
+             Messages: [
+                 {message: 'hello hello', id: "1"},
+                 {message: 'Testtest', id: "2"},
+                 {message: 'test message', id: "3"}],
+             MessageText: '',
+         }
      },
      InfoPosts:{
          PostValue:'',
@@ -32,5 +34,5 @@ let Store = {
         RenderingDom(this);
     }
 
-}
+};
 export default Store;

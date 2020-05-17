@@ -7,7 +7,7 @@ let App = (props)=>{
     return (
             <div className = 'app-wrapper'>
                <Header/>
-               <Content state = {props.store}/>
+               <Content state = {props.store} dispatch = {props.dispatch}/>
             </div>
      );
 }

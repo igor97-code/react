@@ -18,7 +18,6 @@ let MessageItem = ({message}) =>{
 
 
 
-
 let Dialogs = (props)=>{
     let newMEssageValue = React.createRef();
     let TextMessage = ()=>{

@@ -1,3 +1,3 @@
 import {RenderingDom} from "./RenderDom.js";
-import Store from "./state/state.jsx";
+import Store from "./state/ReduxStore.js";
 RenderingDom(Store);
